@@ -38,9 +38,7 @@ class Helpers
                     if ($file->getExtension() !== 'json') {
                         continue;
                     }
-
                     $locale = $file->getFilenameWithoutExtension();
-
                     $tree[$locale] = array_merge(
                         $tree[$locale] ?? [],
                         json_decode($file->getContents(), true)

@@ -73,7 +73,6 @@ class ManageTranslationTest extends TestCase
     public function test_no_fail_when_translations_json_paths_doesnt_exist()
     {
         $supportsJsonPaths = method_exists(Lang::getLoader(), 'jsonPaths') || method_exists(Lang::getLoader(), 'getJsonPaths');
-
         if (!$supportsJsonPaths) {
             $this->markTestSkipped('The current Laravel version does not support loading translations from additional json paths.');
         }
