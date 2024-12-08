@@ -77,11 +77,8 @@ class ManageTranslationTest extends TestCase
         if (!$supportsJsonPaths) {
             $this->markTestSkipped('The current Laravel version does not support loading translations from additional json paths.');
         }
-
         Lang::addJsonPath(__DIR__ . ('/../../tests/assets/non_existent_route'));
-
         $this->expectNotToPerformAssertions();
-
         Matice::translations();
     }
 
